@@ -1,7 +1,7 @@
 import { Button } from "./ui/button";
 import { Github, Linkedin, Mail, ArrowDown } from "lucide-react";
 import { motion } from "motion/react";
-import profileImage from "figma:asset/58678f140bdadb2b029cbaeb46f4cd1a57eec328.png";
+import profileImage from "../../assets/58678f140bdadb2b029cbaeb46f4cd1a57eec328.png";
 
 export function Hero() {
   return (
