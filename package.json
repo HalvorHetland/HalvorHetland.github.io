@@ -12,7 +12,8 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "tailwindcss": "^4.0.0",
-    "tw-animate-css": "^1.0.0"
+    "tw-animate-css": "^1.0.0",
+    "lucide-react": "^0.450.0"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.0.0",
