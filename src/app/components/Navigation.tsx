@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import { ThemeToggle } from "./ThemeToggle";
+import { useTheme } from "../hooks/useTheme";
 
 const navItems = [
   { name: "Home", href: "#home" },
@@ -15,6 +16,7 @@ const navItems = [
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -67,23 +69,19 @@ export function Navigation() {
                   e.preventDefault();
                   scrollToSection(item.href);
                 }}
-                className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-                  isScrolled
-                    ? "text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/30"
-                    : "text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-white/50 dark:hover:bg-gray-800/50"
-                }`}
+                className="px-4 py-2 rounded-lg text-sm font-medium transition-colors text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-white/60 dark:hover:bg-gray-800/50"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
                 {item.name}
               </motion.a>
             ))}
-            <ThemeToggle />
+            <ThemeToggle theme={theme} onToggle={toggleTheme} />
           </div>
 
           {/* Mobile: Theme toggle + Menu button */}
           <div className="md:hidden flex items-center gap-1">
-            <ThemeToggle />
+            <ThemeToggle theme={theme} onToggle={toggleTheme} />
             <button
               className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-gray-700 dark:text-gray-300"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
