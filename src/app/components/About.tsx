@@ -1,6 +1,6 @@
 import { Card, CardContent } from "./ui/card";
 import { motion } from "motion/react";
-import { GraduationCap, Code, Lightbulb, Target } from "lucide-react";
+import { Bot, Container, Monitor, Layout } from "lucide-react";
 
 export function About() {
   return (
@@ -43,31 +43,31 @@ export function About() {
                 <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-4">Currently Learning:</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="flex items-start gap-3">
-                    <Code className="w-5 h-5 text-blue-600 mt-0.5" />
+                    <Bot className="w-5 h-5 text-blue-600 mt-0.5" />
                     <div>
-                      <p className="font-medium text-gray-800 dark:text-gray-200">Rust</p>
-                      <p className="text-sm text-gray-600 dark:text-gray-400">Systems programming and performance</p>
+                      <p className="font-medium text-gray-800 dark:text-gray-200">Advanced AI Tools</p>
+                      <p className="text-sm text-gray-600 dark:text-gray-400">LLMs, agents, and AI-powered workflows</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
-                    <Target className="w-5 h-5 text-purple-600 mt-0.5" />
+                    <Container className="w-5 h-5 text-purple-600 mt-0.5" />
                     <div>
-                      <p className="font-medium text-gray-800">Kubernetes</p>
-                      <p className="text-sm text-gray-600">Container orchestration and DevOps</p>
+                      <p className="font-medium text-gray-800 dark:text-gray-200">Docker</p>
+                      <p className="text-sm text-gray-600 dark:text-gray-400">Containerization and local dev environments</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
-                    <Lightbulb className="w-5 h-5 text-yellow-600 mt-0.5" />
+                    <Monitor className="w-5 h-5 text-yellow-600 mt-0.5" />
                     <div>
-                      <p className="font-medium text-gray-800">Data Engineering</p>
-                      <p className="text-sm text-gray-600">Building scalable data pipelines</p>
+                      <p className="font-medium text-gray-800 dark:text-gray-200">HCI</p>
+                      <p className="text-sm text-gray-600 dark:text-gray-400">Human-computer interaction research and design</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
-                    <GraduationCap className="w-5 h-5 text-indigo-600 mt-0.5" />
+                    <Layout className="w-5 h-5 text-indigo-600 mt-0.5" />
                     <div>
-                      <p className="font-medium text-gray-800">Advanced Algorithms</p>
-                      <p className="text-sm text-gray-600">Optimization and complexity analysis</p>
+                      <p className="font-medium text-gray-800 dark:text-gray-200">Frontend Dev</p>
+                      <p className="text-sm text-gray-600 dark:text-gray-400">Modern frameworks, animations, and UX polish</p>
                     </div>
                   </div>
                 </div>
