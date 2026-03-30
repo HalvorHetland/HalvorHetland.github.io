@@ -1,5 +1,5 @@
 import { Button } from "./ui/button";
-import { Github, Linkedin, Mail, ArrowDown } from "lucide-react";
+import { Github, Linkedin, Mail, ArrowDown, FolderOpen } from "lucide-react";
 import { motion } from "motion/react";
 import profileImage from "../../assets/58678f140bdadb2b029cbaeb46f4cd1a57eec328.png";
 
@@ -35,20 +35,29 @@ export function Hero() {
             </div>
           </motion.div>
           
-          <motion.h1
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="mb-4 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent"
+            className="text-gray-500 font-medium tracking-widest uppercase text-sm mb-2"
+          >
+            Hi, I'm
+          </motion.p>
+
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.35 }}
+            className="mb-2 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent"
           >
             Halvor Hetland
           </motion.h1>
-          
+
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
-            className="text-gray-600 mb-6 text-xl"
+            className="text-gray-500 mb-6 text-xl"
           >
             Solution Developer | Informatics: Design, Use & Interaction
           </motion.h2>
@@ -71,6 +80,13 @@ export function Hero() {
           transition={{ delay: 0.6 }}
           className="flex flex-wrap gap-4 justify-center mb-8"
         >
+          <Button
+            className="gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 shadow-lg hover:shadow-xl transition-all"
+            onClick={() => document.querySelector("#projects")?.scrollIntoView({ behavior: "smooth" })}
+          >
+            <FolderOpen className="w-4 h-4" />
+            View Projects
+          </Button>
           <Button className="gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 shadow-lg hover:shadow-xl transition-all" asChild>
             <a href="mailto:halvor.hetland@gmail.com">
               <Mail className="w-4 h-4" />
@@ -80,7 +96,7 @@ export function Hero() {
           <Button variant="outline" className="gap-2 border-2 hover:bg-blue-50 transition-all" asChild>
             <a href="https://www.linkedin.com/in/halvor-hetland-34096b1b8/" target="_blank" rel="noopener noreferrer">
               <Linkedin className="w-4 h-4" />
-              LinkedIn Profile
+              LinkedIn
             </a>
           </Button>
         </motion.div>

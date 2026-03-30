@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "motion/react";
 
 const navItems = [
   { name: "Home", href: "#home" },
+  { name: "About", href: "#about" },
   { name: "Projects", href: "#projects" },
   { name: "Experience", href: "#experience" },
   { name: "Education", href: "#education" },
@@ -52,7 +53,7 @@ export function Navigation() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Halvor Hetland
+            HalvorHetland.no
           </motion.a>
 
           {/* Desktop Navigation */}
